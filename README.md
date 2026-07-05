@@ -9,7 +9,7 @@ El objetivo es desarrollar un sistema de simulación de cajero automático en Py
 
 ---
 
-	## Funcionalidades
+## Funcionalidades
 
 | # | Operación | Descripción |
 |---|-----------|-------------|
@@ -31,7 +31,7 @@ El objetivo es desarrollar un sistema de simulación de cajero automático en Py
 
 ---
 
-	## Estructura del proyecto
+## Estructura del proyecto
 
 ```
 project/
