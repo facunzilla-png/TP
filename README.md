@@ -9,7 +9,20 @@ El objetivo es desarrollar un sistema de simulación de cajero automático en Py
 
 ---
 
-	@@ -32,7 +26,8 @@ La sesión cuenta con un límite de 3 intentos fallidos de ingreso, tras los cua
+	## Funcionalidades
+
+| # | Operación | Descripción |
+|---|-----------|-------------|
+| 1 | Inicio de sesión | Validación de DNI (7-8 dígitos) y PIN (4 dígitos). Máximo 3 intentos. |
+| 2 | Consultar saldo | Muestra el titular y el saldo disponible. |
+| 3 | Extraer dinero | Controla límite diario ($50.000), saldo suficiente y confirma antes de dispensar. |
+| 4 | Depositar dinero | Acredita el monto ingresado al saldo de la cuenta. |
+| 5 | Transferir | Valida DNI destino (existente, distinto al origen), límite ($100.000) y saldo. |
+| 6 | Ver últimas operaciones | Muestra hasta 10 operaciones recientes con fecha, tipo, monto y saldo posterior. |
+| 7 | Cambiar PIN | Requiere PIN actual, permite ingreso del nuevo con confirmación. |
+| 8 | Salir | Finaliza la sesión y pregunta si se desea realizar otra operación con otra tarjeta. |
+
+---
 
 ## Diagrama de arquitectura
 
@@ -18,7 +31,16 @@ El objetivo es desarrollar un sistema de simulación de cajero automático en Py
 
 ---
 
-	@@ -99,19 +94,25 @@ python cajero.py
+	## Estructura del proyecto
+
+```
+project/
+├── cajero.py        # Punto de entrada. Menú principal y ciclo de sesión.
+├── datos.py         # Capa de datos. Usuarios en memoria, límites, historial.
+├── operaciones.py   # Lógica de cada operación bancaria.
+└── utilidades.py    # Validaciones, formato de moneda, entrada de datos.
+```
+---
 
 ## Uso de Inteligencia Artificial
 
