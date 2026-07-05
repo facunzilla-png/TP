@@ -46,12 +46,15 @@ project/
 
 Cloud Pro - Sonnet 5
   - Revisar el codigo en busca de inconsistencias y sugerencias de mejoras
+
 Gemini - 3.1 Flach lite
-  - Revicion y reestructuracio de la logica del trabajo (informes, conexiones)
+  - Revisión y reestructuración de la logica del trabajo (informes, conexiones)
+
 Chatgpt Plus - GPT 5
-  - Complemento de correccion en base a las salidas de Cloud 
+  - Complemento de corrección en base a las salidas de Cloud
+
 Microsoft 365 Copilot - GPT 5
-  - Uso infomral, dudas generales y correccion de terminos
+  - Uso informal, dudas generales y corrección de terminos
 
 ---
 
