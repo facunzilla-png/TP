@@ -31,6 +31,16 @@ El objetivo es desarrollar un sistema de simulación de cajero automático en Py
 
 ---
 
+## Usuarios de prueba
+
+El sistema incluye 3 cuentas precargadas para pruebas:
+
+| DNI | Nombre | PIN | Saldo inicial |
+|-----|--------|-----|---------------|
+| 12345678 | Ana García | 1234 | $ 150.000,00 |
+| 87654321 | Carlos López | 5678 | $ 32.500,50 |
+| 11223344 | María Rodríguez | 9999 | $ 5.000,00 |
+
 ## Estructura del proyecto
 
 ```
