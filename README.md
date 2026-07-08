@@ -81,5 +81,3 @@ Microsoft 365 Copilot - GPT 5
 
 **Comisión:** K1.1
 
-[![Video de Demo](https://img.youtube.com/vi/wd7oDCb3gUY/0.jpg)](https://www.youtube.com/watch?v=wd7oDCb3gUY)
-
