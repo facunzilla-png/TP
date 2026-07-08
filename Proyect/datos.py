@@ -1,7 +1,3 @@
-"""
-Módulo de datos: almacena y gestiona la información de los usuarios y sus cuentas.
-"""
-
 # Base de datos simulada de usuarios
 # Estructura: DNI -> {nombre, pin, saldo, historial}
 _usuarios = {
@@ -10,21 +6,19 @@ _usuarios = {
         "pin": "1234",
         "saldo": 150000.00,
         "historial": [],
-        "bloqueada": False
     },
     "87654321": {
         "nombre": "Carlos López",
         "pin": "5678",
         "saldo": 32500.50,
         "historial": [],
-        "bloqueada": False
+        
     },
     "11223344": {
         "nombre": "María Rodríguez",
         "pin": "9999",
         "saldo": 5000.00,
         "historial": [],
-        "bloqueada": False
     }
 }
 
@@ -35,12 +29,10 @@ MAXIMO_HISTORIAL = 10  # Cantidad de operaciones a conservar
 
 
 def existe_usuario(dni):
-    """Verifica si un DNI existe en el sistema."""
     return dni in _usuarios
 
 
 def verificar_pin(dni, pin):
-    """Verifica si el PIN ingresado corresponde al DNI dado."""
     if not existe_usuario(dni):
         return False
     return _usuarios[dni]["pin"] == pin
@@ -128,16 +120,3 @@ def calcular_extraido_hoy(dni):
             total = total + operacion["monto"]  # el acumulador suma cada extracción de hoy
 
     return total
-
-
-def bloquear_cuenta(dni):
-    """Marca la cuenta como bloqueada."""
-    if existe_usuario(dni):
-        _usuarios[dni]["bloqueada"] = True
-
-
-def esta_bloqueada(dni):
-    """Verifica si la cuenta está bloqueada."""
-    if existe_usuario(dni):
-        return _usuarios[dni]["bloqueada"]
-    return False

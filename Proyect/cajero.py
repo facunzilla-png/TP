@@ -67,13 +67,10 @@ def iniciar_sesion():
             print("  ✗ PIN incorrecto.")
             intentos += 1
 
-            # Si este fue el último intento permitido, bloqueamos la cuenta de verdad
-            if intentos == max_intentos:
-                datos.bloquear_cuenta(dni)
-
-    print("\n  ✗ Demasiados intentos fallidos. Tarjeta bloqueada temporalmente.")
-    print("  Comuníquese con su banco.")
-    return None
+        if intentos == max_intentos:
+           print("\n  ✗ Demasiados intentos fallidos. Tarjeta bloqueada temporalmente.")
+           print("  Comuníquese con su banco.")
+           return None
 
 def ejecutar_sesion(dni):
     """Ciclo principal de la sesión de usuario."""
