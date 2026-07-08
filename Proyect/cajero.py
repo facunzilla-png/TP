@@ -48,10 +48,6 @@ def iniciar_sesion():
             intentos += 1
             continue
 
-        if datos.esta_bloqueada(dni):
-            print("  ✗ Esta cuenta está bloqueada. Comuníquese con su banco.")
-            return None
-
         pin = input("  Ingrese su PIN (4 dígitos): ").strip()
 
         if not utilidades.validar_pin(pin):
